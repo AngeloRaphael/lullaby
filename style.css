@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5fff5;
+}
+
+/* header */
+header{
+    background: #107f108c;
+    padding: 15px;
+    text-align: center;
+    color: aliceblue;
+}
+header h1{
+    margin: 0;
+    font-size: 2.5rem;
+    color: #f8ffdd;
+}
+header p{
+    font-size: 1.2rem;
+}
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 7px;
+    background: #c9e6c9;
+}
+nav a{
+    margin: 5px;
+    text-decoration: none;
+    color: #0b4f0b;
+    font-weight: bold;
+    font-size: 13.5pt;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+nav a:hover{
+    transform: scale(1.2);
+}
+
+/* hero */
+    .hero-carousel {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    .hero-carousel .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .hero-carousel .slide.active {
+      opacity: 1;
+    }
+    .hero-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+    .carousel-button {
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+/* produtos */
+.prod{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;  
+    padding: 40px;
+}
+.produt{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.produt img{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+
+}
+.produt img:hover{
+    transform: scale(0.9);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.produt h3{
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    
+}
+.produt p{
+    color: #555;
+}
+.add-to-cart{
+    background: #107f108c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+footer {
+    background: #107f108c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+@media (max-width: 600px) {
+    .hero-text {
+        font-size: 1.5rem;
+    }
+}

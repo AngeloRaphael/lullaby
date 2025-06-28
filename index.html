@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function addToCart(productName) {
+      alert(`"${productName}" foi adicionado ao carrinho.`);
+    }
+    window.onload = function() {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.hero-carousel .slide');
+      const prevBtn = document.getElementById('prevSlide');
+      const nextBtn = document.getElementById('nextSlide');
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      setInterval(nextSlide, 4000);
+
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+    };
+  </script>
+</head>
+<body>
+
+    <header>
+        <h1>Lullaby Intimate</h1>
+        <p>Pijamas e Roupas Íntimas para Todas as Estações</p>
+    </header>
+    <nav class="barra">
+        <a href="#verao">Verão</a>
+        <a href="#inverno">Inverno</a>            
+        <a href="#intimas">Ìntimas</a>            
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="hero-carousel">
+    <div class="slide active" style="background-image: url(./teste/int2.webp);"></div>
+    <div class="slide" style="background-image: url('./teste/inverno1.webp');"></div>
+    <div class="slide" style="background-image: url('./teste/int3.jpg');"></div>
+    <div class="slide" style="background-image: url('./teste/verao3.webp');"></div>
+    <h2 class="hero-text">Conforto e Estilo em Qualquer Estação</h2>
+    <div class="carousel-controls">
+        <button class="carousel-button" id="prevSlide">❮</button>
+        <button class="carousel-button" id="nextSlide">❯</button>
+    </div>  
+    </section>
+
+    <section class="prod" id="verao">
+        <div class="produt">
+            <img src="./teste/verao1.webp" alt="Pijama VERÃO">
+            <h3>Conjunto verão</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto Renda Leve')">Adicionar ao Carrinho</button>
+
+        </div>
+        <div class="produt">
+            <img src="./teste/verao2.webp" alt="Pijama VERÃO">
+            <h3>Conjunto verão</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto Renda Leve')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produt">
+            <img src="./teste/verao3.webp" alt="Pijama VERÃO">
+            <h3>Conjunto verão</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto Renda Leve')">Adicionar ao Carrinho</button>
+
+        </div>
+     </section>
+
+    <section class="prod" id="inverno">
+        <div class="produt">
+            <img src="./teste/inverno1.webp" alt="Pijama INVERNO">
+            <h3>Conjunto INVERNO</h3>
+            <p>R$ 89,90</p>
+           <button class="add-to-cart" onclick="addToCart('Conjunto')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produt">
+            <img src="./teste/inverno2.webp" alt="Pijama INVERNO">
+            <h3>Conjunto INVERNO</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto')">Adicionar ao Carrinho</button>
+
+        </div>
+        <div class="produt">
+            <img src="./teste/inverno3.webp" alt="Pijama INVERNO">
+            <h3>Conjunto INVERNO</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto')">Adicionar ao Carrinho</button>
+
+        </div>
+    </section>  
+    <section class="prod" id="intimas">
+        <div class="produt">
+            <img src="./teste/int1.webp  " alt="INTIMA">
+            <h3>Conjunto INTIMO</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto')">Adicionar ao Carrinho</button>
+
+        </div>
+        <div class="produt">
+            <img src="./teste/int2.webp" alt="INTIMA">
+            <h3>Conjunto INTIMO</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto')">Adicionar ao Carrinho</button>
+
+        </div>
+        <div class="produt">
+            <img src="./teste/int3.jpg" alt="INTIMA">
+            <h3>Conjunto INTIMO</h3>
+            <p>R$ 89,90</p>
+            <button class="add-to-cart" onclick="addToCart('Conjunto')">Adicionar ao Carrinho</button>
+
+        </div>
+    </section>    
+   <footer id="contato">
+        <p>Contato: atendimento@lullaby.com.br | (11) 98765-4321</p>
+        <p>&copy; 2025 Lullaby Intimate - Todos os direitos reservados.</p>
+    </footer>
+    <a class="whatsapp" href=\"https://wa.me/5531995476754\" target=\"_blank\">Fale no WhatsApp</a>
+    
+
+</body>
+</html>
